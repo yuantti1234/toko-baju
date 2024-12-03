@@ -9,7 +9,7 @@ products = {
 }
 
 # Header aplikasi
-st.title("Penjualan Baju di Toko")
+st.title("Penjualan Baju di Toko Arfabi")
 st.subheader("Silakan pilih produk yang ingin dibeli:")
 
 # Pilihan Produk
