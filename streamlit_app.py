@@ -2,10 +2,10 @@ import streamlit as st
 
 # Data produk
 products = {
-    "Kaos": {"price": 50000, "image": "kaos.jpg"},
-    "Kemeja": {"price": 100000, "image": "kemeja.jpg"},
-    "Jaket": {"price": 150000, "image": "jaket.jpg"},
-    "Sweater": {"price": 125000, "image": "sweater.jpg"}
+    "Kaos":50000,
+    "Kemeja":100000,
+    "Jaket":150000,
+    "Sweater":125000,
 }
 
 # Header aplikasi
