@@ -18,9 +18,6 @@ product = st.selectbox("Pilih produk:", list(products.keys()))
 price = products[product]
 st.write(f"Harga per item: Rp {price:,}")
 
-# Jumlah Pembelian
-quantity = st.number_input("Jumlah pembelian:", min_value=1, max_value=100, value=1)
-
 # Total Harga
 total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
