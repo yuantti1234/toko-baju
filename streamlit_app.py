@@ -23,9 +23,6 @@ total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
 import streamlit as st
 
-# Menampilkan Gambar Produk
-st.image(products[product]["image"], caption=f"Gambar {product}", use_column_width=True)
-
 # Tombol Konfirmasi Pembelian
 if st.button("Konfirmasi Pembelian"):
     st.success(f"Pembelian berhasil! Anda membeli {quantity} {product}(s) dengan total Rp {total_price:,}.")
