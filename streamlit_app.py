@@ -6,6 +6,7 @@ products = {
     "Kemeja":1000000,
     "Jaket":150000,
     "Sweater":125000,
+}
     
 #Header aplikasi
 st.title("Penjujalan Baju di Toko Arfabi")
