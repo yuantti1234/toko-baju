@@ -15,9 +15,6 @@ st.subheader("Silakan pilih produk yang ingin dibeli:")
 # Pilihan Produk
 product = st.selectbox("Pilih produk:", list(products.keys()))
 
-# Menampilkan Gambar Produk
-st.image(products[product]["image"], caption=f"Gambar {product}", use_column_width=True)
-
 # Harga Produk
 price = products[product]["price"]
 st.write(f"Harga per item: Rp {price:,}")
