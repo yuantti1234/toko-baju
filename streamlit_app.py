@@ -7,6 +7,8 @@ products = {
     "Jaket": 150000,
     "Sweater": 125000,
 }
+# pilih ukuran 
+size = st.selectbox("pilih ukuran baju:", ["S", "M", "L", "XL" ])
 
 # Header aplikasi
 st.title("Penjualan Baju di Toko Arfabi")
