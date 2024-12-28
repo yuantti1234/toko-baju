@@ -26,42 +26,12 @@ total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
 import streamlit as st
 
-# Data produk
-products = {
-    "Kaos": {"price": 50000, "image": "kaos.jpg"},
-    "Kemeja": {"price": 100000, "image": "kemeja.jpg"},
-    "Jaket": {"price": 150000, "image": "jaket.jpg"},
-    "Sweater": {"price": 125000, "image": "sweater.jpg"}
-}
-
 # Header aplikasi
 st.title("Penjualan Baju di Toko Arfabi")
 st.subheader("Silakan pilih produk yang ingin dibeli:")
 
-# Pilihan Produk
-product = st.selectbox("Pilih produk:", list(products.keys()))
-
 # Menampilkan Gambar Produk
 st.image(products[product]["image"], caption=f"Gambar {product}", use_column_width=True)
-
-# Harga Produk
-price = products[product]["price"]
-st.write(f"Harga per item: Rp {price:,}")
-
-# Pilihan Ukuran
-size = st.selectbox("Pilih ukuran:", ["S", "M", "L", "XL"])
-st.write(f"Ukuran yang dipilih: {size}")
-
-# Jumlah Pembelian
-quantity = st.number_input("Jumlah pembelian", min_value=1, max_value=100, value=1)
-
-# Total Harga
-total_price = price * quantity
-st.write(f"Total harga: Rp {total_price:,}")
-
-# Tombol Konfirmasi Pembelian
-if st.button("Konfirmasi Pembelian"):
-    st.success(f"Pembelian berhasil! Anda membeli {quantity} {product}(s) ukuran {size} dengan total Rp {total_price:,}.")
 
 # Tombol Konfirmasi Pembelian
 if st.button("Konfirmasi Pembelian"):
