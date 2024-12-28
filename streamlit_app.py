@@ -16,8 +16,14 @@ st.subheader("Silakan pilih produk yang ingin dibeli:")
 product = st.selectbox("Pilih produk:", list(products.keys()))
 
 # Harga Produk
-price = products[product]["price"]
-st.write(f"Harga per item: Rp {price:,}")
+products = {
+    "kaos":{"harga": 50000},
+    "Kemeja":{"harga": 100000},
+    "Jaket":{"harga":150000},
+    "Sweater":{"harga":125000},
+}
+product = "kaos"
+price = products[product]["harga"]
 
 # Pilihan Ukuran
 size = st.selectbox("Pilih ukuran:", ["S", "M", "L", "XL"])
