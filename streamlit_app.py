@@ -26,10 +26,6 @@ total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
 import streamlit as st
 
-# Header aplikasi
-st.title("Penjualan Baju di Toko Arfabi")
-st.subheader("Silakan pilih produk yang ingin dibeli:")
-
 # Menampilkan Gambar Produk
 st.image(products[product]["image"], caption=f"Gambar {product}", use_column_width=True)
 
