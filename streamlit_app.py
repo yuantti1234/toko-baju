@@ -1,4 +1,5 @@
 import streamlit as st
+
 # Data Produk
 products = {
     "Kaos":50000,
@@ -8,7 +9,7 @@ products = {
     
 #Header aplikasi
 st.title("Penjujalan Baju di Toko Arfabi")
-st.subheader("silahkan pilih produk yang ingin dibeli:)
+st.subheader("silahkan pilih produk yang ingin dibeli:")
 
  # Pilih Produk
 product = st.selectbox("Pilih produk:", list(products.keys()))
