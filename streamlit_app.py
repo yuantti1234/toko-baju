@@ -1,22 +1,17 @@
 import streamlit as st
-
-# Data produk
+# Data Produk
 products = {
-    "Kaos": {"price": 50000, "image": "kaos.jpg"},
-    "Kemeja": {"price": 100000, "image": "kemeja.jpg"},
-    "Jaket": {"price": 150000, "image": "jaket.jpg"},
-    "Sweater": {"price": 125000, "image": "sweater.jpg"}
-}
+    "Kaos":50000,
+    "Kemeja":1000000,
+    "Jaket":150000,
+    "Sweater":125000,
+    
+#Header aplikasi
+st.title("Penjujalan Baju di Toko Arfabi")
+st.subheader("silahkan pilih produk yang ingin dibeli:)
 
-# Header aplikasi
-st.title("Penjualan Baju di Toko Arfabi")
-st.subheader("Silakan pilih produk yang ingin dibeli:")
-
-# Pilihan Produk
+ # Pilih Produk
 product = st.selectbox("Pilih produk:", list(products.keys()))
-
-# Menampilkan Gambar Produk
-st.image(products[product]["image"], caption=f"Gambar {product}", use_column_width=True)
 
 # Harga Produk
 price = products[product]["price"]
