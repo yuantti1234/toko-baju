@@ -7,9 +7,6 @@ products = {
     "Jaket": 150000,
     "Sweater": 125000,
 }
-# pilih ukuran 
-size = st.selectbox("pilih ukuran baju:", ["S", "M", "L", "XL" ])
-
 # Header aplikasi
 st.title("Penjualan Baju di Toko Arfabi")
 st.subheader("Silakan pilih produk yang ingin dibeli:")
@@ -27,6 +24,10 @@ quantity = st.number_input("Jumlah pembelian:", min_value=1, max_value=100, valu
 # Total Harga
 total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
+
+# pilih ukuran 
+size = st.selectbox("pilih ukuran baju:", ["S", "M", "L", "XL" ])
+
 
 # Tombol Konfirmasi Pembelian
 if st.button("Konfirmasi Pembelian"):
