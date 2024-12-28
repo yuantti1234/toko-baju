@@ -20,6 +20,8 @@ price = products[product]
 st.write(f"Harga per item: Rp {price:,}")
 
 # Total Harga
+price = 100000
+quantity = 2 
 total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
 import streamlit as st
