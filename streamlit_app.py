@@ -25,6 +25,26 @@ products = {
 product = "kaos"
 price = products[product]["harga"]
 
+# pilihan produk 1
+product1 = st.selectbox(pilih produk pertama:",
+list(products.keys()))
+size1 = st.selectbox(f"pilih ukuran untuk {product1}:", sizes)
+
+# pilihan produk 2
+product2 = st.selectbox(pilih produk kedua:",
+list(products.keys()))
+size1 = st.selectbox(f"pilih ukuran untuk {product2}:", sizes)
+
+# pilihan produk 3
+product3 = st.selectbox(pilih produk ketiga:",
+list(products.keys()))
+size1 = st.selectbox(f"pilih ukuran untuk {product3}:", sizes)
+
+# pilihan produk 4
+product4 = st.selectbox(pilih produk keempat:",
+list(products.keys()))
+size1 = st.selectbox(f"pilih ukuran untuk {product4}:", sizes)
+
 # Pilihan Ukuran
 size = st.selectbox("Pilih ukuran:", ["S", "M", "L", "XL"])
 st.write(f"Ukuran yang dipilih: {size}")
