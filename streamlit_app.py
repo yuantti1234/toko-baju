@@ -40,7 +40,6 @@ size = st.selectbox( f"Pilih ukuran {product}:", ["S", "M", "L", "XL"],
                    key=f"size_{product}"
                    )
 st.write(f"ukuran yang dipilih untuk {product}: {size}")
-)
 st.write(f"Ukuran yang dipilih: {size}")
 
 # Jumlah pembelian untuk produk dengan ukuran tersebut
