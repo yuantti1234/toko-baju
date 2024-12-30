@@ -35,6 +35,8 @@ total_price = 0
 for product in selected_products:
 st.write(f"### {product}")
 
+#...Kode untuk memilih ukuran, jumlah, dan menghitung harga ...
+
 # Pilihan Ukuran
 size = st.selectbox("Pilih ukuran:", ["S", "M", "L", "XL"])
 st.write(f"Ukuran yang dipilih: {size}")
