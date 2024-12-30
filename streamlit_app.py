@@ -58,17 +58,11 @@ st.write(f"Total harga: Rp {total_price:,}")
 if st.button("Konfirmasi Pembelian"):
     st.success(f"Pembelian berhasil! Anda membeli {quantity} {product}(s) ukuran {size} dengan total Rp {total_price:,}.")
 
-import streamlit as st
-
 # Data produk
 products = {
     "Kaos": {"harga": {"S": 50000, "M": 60000, "L": 70000, "XL": 80000}},
     "Sweater": {"harga": {"S": 120000, "M": 130000, "L": 140000, "XL": 150000}},
 }
-
-# Pilih produk
-st.title("Penjualan Baju di Toko Arfabi")
-st.write("Silakan pilih produk yang ingin dibeli:")
 
 selected_products = st.multiselect("Pilih produk:", list(products.keys()))
 
