@@ -25,8 +25,26 @@ products = {
 product = "kaos"
 price = products[product]["harga"]
 
-# pilihan produk 1
-product1 = st.selectbox("pilih produk pertama:",["produk A", "produk B", "produk C", "produk D",])
+# Pilihan Produk
+selected_products = st.multiselect("Pilih produk:", list(products.keys()))
+
+# Menyimpan total harga
+total_price = 0
+
+# Memproses setiap produk yang dipilih
+for product in selected_products:
+st.write(f"### {product}")
+    
+# Pilih ukuran untuk produk
+size = st.selectbox(f"Pilih ukuran untuk {product}:", ["S", "M", "L", "XL"], key=f"size_{product}")
+st.write(f"Ukuran yang dipilih untuk {product}: {size}")
+    
+# Jumlah pembelian untuk produk dengan ukuran tersebut
+ quantity = st.number_input(f"Jumlah {product} (Ukuran {size}):", min_value=1, max_value=100, value=1, key=f"quantity_{product}")
+    
+# Menampilkan total harga keseluruhan
+st.write("## Total Harga")
+st.write(f"Rp {total_price:,}")
 
 # Pilihan Ukuran
 size = st.selectbox("Pilih ukuran:", ["S", "M", "L", "XL"])
