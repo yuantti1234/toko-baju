@@ -26,7 +26,7 @@ product = "kaos"
 price = products[product]["harga"]
 
 # pilihan produk 1
-product1 = st.selectbox(pilih produk pertama:",["produk A", "produk B "])
+product1 = st.selectbox("pilih produk pertama:",["produk A", "produk B "])
 
 # pilihan produk 2
 product2 = st.selectbox(pilih produk kedua:",
