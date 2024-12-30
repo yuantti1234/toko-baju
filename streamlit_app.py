@@ -33,7 +33,7 @@ total_price = 0
 
 # Memproses setiap produk yang dipilih
 for product in selected_products:
-st.write(f"### {product}")
+st.write(f"###  {product}")
 
 #...Kode untuk memilih ukuran, jumlah, dan menghitung harga ...
 
