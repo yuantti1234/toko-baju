@@ -40,17 +40,11 @@ size = st.selectbox( f"Pilih ukuran {product}:", ["S", "M", "L", "XL"],
                    key=f"size_{product}"
                    )
 st.write(f"ukuran yang dipilih untuk {product}: {size}")
-
+)
 st.write(f"Ukuran yang dipilih: {size}")
 
 # Jumlah pembelian untuk produk dengan ukuran tersebut
- quantity = st.number_input(f"Jumlah
- {product} (Ukuran {size}):",
- min_value=1, 
- max_value=100,
- value=1, 
- key=f"quantity_{product}"
- )
+ quantity = st.number_input(f"Jumlah pembelian",main_value=100, value=1)
 
 # Menampilkan total harga keseluruhan
 st.write("## Total Harga")
