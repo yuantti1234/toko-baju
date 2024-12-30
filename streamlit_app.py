@@ -37,16 +37,16 @@ st.write(f"### {product}")
 
 #...Kode untuk memilih ukuran, jumlah, dan menghitung harga ...
 
+# Menampilkan total harga keseluruhan
+st.write("## Total Harga")
+st.write(f"Rp {total_price:,}")
+
 # Pilihan Ukuran
 size = st.selectbox("Pilih ukuran:", ["S", "M", "L", "XL"])
 st.write(f"Ukuran yang dipilih: {size}")
         
 # Jumlah pembelian untuk produk dengan ukuran tersebut
  quantity = st.number_input(f"Jumlah {product} (Ukuran {size}):", min_value=1, max_value=100, value=1, key=f"quantity_{product}")
-    
-# Menampilkan total harga keseluruhan
-st.write("## Total Harga")
-st.write(f"Rp {total_price:,}")
 
 # Jumlah Pembelian
 quantity = st.number_input("Jumlah pembelian", min_value=1, max_value=100, value=1)
