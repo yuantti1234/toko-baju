@@ -33,7 +33,7 @@ total_price = 0
 
 # Memproses setiap produk yang dipilih
 for product in selected_products:
-st.write(f"###  {product}")
+    st.write(f"### {product}")
 
 # Pilihan Ukuran
 size = st.selectbox( f"Pilih ukuran {product}:", ["S", "M", "L", "XL"],
