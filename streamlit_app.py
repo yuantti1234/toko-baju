@@ -43,6 +43,26 @@ st.write("## Total Harga")
 st.write(f"Rp {total_price:,}"
         )
 
+import streamlit as st
+
+products = {
+    "Kaos": 50000,
+    "Kemeja": 100000,
+    "Jaket": 150000,
+    "Sweater": 125000
+}
+
+keranjang = []
+
+# ... (sisanya kode yang sudah ada)
+
+# Tambah tombol "Tambah ke Keranjang"
+st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
+
+# Tampilkan isi keranjang
+st.write("Keranjang Belanja:")
+for item in keranjang:
+    st.write(item)
 # Total Harga
 total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
@@ -50,31 +70,4 @@ st.write(f"Total harga: Rp {total_price:,}")
 # Tombol Konfirmasi Pembelian
 if st.button("Konfirmasi Pembelian"):
     st.success(f"Pembelian berhasil! Anda membeli {quantity} {product} ukuran {size} dengan total Rp {total_price:,}.")
-
-# Data produk
-produk = {
-    "Produk A": 50000,  # Harga per unit
-    "Produk B": 100000,
-    "Produk C": 100000,
-    "Produk D": 124000,
-}
-
-# Fungsi untuk menghitung harga total
-def hitung_harga(produk_terpilih, jumlah):
-    harga_per_unit = produk.get(produk_terpilih, 0)
-    return harga_per_unit * jumlah
-
-# Input dari pengguna
-print("Pilih produk:")
-for i, p in enumerate(produk.keys(), 1):
-    print(f"{i}. {p}")
-
-pilihan = int(input("Masukkan nomor produk: "))
-produk_terpilih = list(produk.keys())[pilihan - 1]
-jumlah = int(input("Masukkan jumlah pembelian: "))
-
-# Hitung harga
-harga_total = hitung_harga(produk_terpilih, jumlah)
-print(f"Harga satuan untuk {produk_terpilih}: Rp {produk[produk_terpilih]:,}")
-print(f"Total harga untuk {jumlah} {produk_terpilih}: Rp {harga_total:,}")
 
