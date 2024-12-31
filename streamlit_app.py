@@ -31,31 +31,6 @@ selected_products = st.multiselect("Pilih produk:", list(products.keys()))
 # Menyimpan total harga
 total_price = 0
 
-# Memproses setiap produk yang dipilih
-for product in selected_products:
-    st.write(f"### {product}")
-    # Data produk
-produk = {
-    "Produk A": 50000,  # Harga per unit
-    "Produk B": 100000,
-    "Produk C": 150000,
-    "Produk D":125000,
-}
-
-# Fungsi untuk menghitung harga total
-def hitung_harga(produk_terpilih, jumlah):
-    harga_per_unit = produk.get(produk_terpilih, 0)
-    return harga_per_unit * jumlah
-
-# Input dari pengguna
-print("Pilih produk:")
-for i, p in enumerate(produk.keys(), 1):
-    print(f"{i}. {p}")
-
-pilihan = int(input("Masukkan nomor produk: "))
-produk_terpilih = list(produk.keys())[pilihan - 1]
-jumlah = int(input("Masukkan jumlah pembelian: "))
-
 # Hitung harga
 harga_total = hitung_harga(produk_terpilih, jumlah)
 print(f"Harga satuan untuk {produk_terpilih}: Rp {produk[produk_terpilih]:,}")
