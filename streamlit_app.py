@@ -50,34 +50,6 @@ st.write("## Total Harga")
 st.write(f"Rp {total_price:,}"
         )
 
-# Data produk 
-produk = {
-    "produk A":50000, 
-    # harga per unit
-    "produk B":100000,
-    "produk C":150000,
-    "produk D":125000,
-}
-
-# Fungsi untuk menghitung harga total
-def hitung_harga(produk_terpilih, jumlah):
-    harga_per_unit = produk.get(produk_terpilih, 0)
-    return harga_per_unit * jumlah
-
-# Input dari pengguna
-print("Pilih produk:")
-for i, p in enumerate(produk.keys(), 1):
-    print(f"{i}. {p}")
-
-pilihan = int(input("Masukkan nomor produk: "))
-produk_terpilih = list(produk.keys())[pilihan - 1]
-jumlah = int(input("Masukkan jumlah pembelian: "))
-
-# Hitung harga
-harga_total = hitung_harga(produk_terpilih, jumlah)
-print(f"Harga satuan untuk {produk_terpilih}: Rp {produk[produk_terpilih]:,}")
-print(f"Total harga untuk {jumlah} {produk_terpilih}: Rp {harga_total:,}")
-
 # Total Harga
 total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
