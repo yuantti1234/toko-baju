@@ -15,33 +15,6 @@ st.subheader("Silakan pilih produk yang ingin dibeli:")
 # Pilihan Produk
 product = st.selectbox("Pilih produk:", list(products.keys()))
 
-# Data produk
-produk = {
-    "Produk A": 50000,  # Harga per unit
-    "Produk B": 100000,
-    "Produk C": 150000,
-    "produk D": 125000,
-}
-
-# Fungsi untuk menghitung harga total
-def hitung_harga(produk_terpilih, jumlah):
-    harga_per_unit = produk.get(produk_terpilih, 0)
-    return harga_per_unit * jumlah
-
-# Input dari pengguna
-print("Pilih produk:")
-for i, p in enumerate(produk.keys(), 1):
-    print(f"{i}. {p}")
-
-pilihan = int(input("Masukkan nomor produk: "))
-produk_terpilih = list(produk.keys())[pilihan - 1]
-jumlah = int(input("Masukkan jumlah pembelian: "))
-
-# Hitung harga
-harga_total = hitung_harga(produk_terpilih, jumlah)
-print(f"Harga satuan untuk {produk_terpilih}: Rp {produk[produk_terpilih]:,}")
-print(f"Total harga untuk {jumlah} {produk_terpilih}: Rp {harga_total:,}")
-
 # Harga Produk
 products = {
     "kaos":{"harga": 50000},
@@ -51,9 +24,6 @@ products = {
 }
 product = "kaos"
 price = products[product]["harga"]
-
-# Pilihan Produk
-selected_products = st.multiselect("Pilih produk:", list(products.keys()))
 
 # Menyimpan total harga
 total_price = 0
