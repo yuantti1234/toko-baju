@@ -53,7 +53,7 @@ st.write(f"Rp {total_price:,}"
 # Data produk 
 produk = {
     "produk A":50000, 
-    # hARGA PER UNIT 
+    # harga per unit
     "produk B":100000,
     "produk C":150000,
     "produk D":125000,
