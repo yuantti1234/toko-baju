@@ -56,4 +56,4 @@ st.write(f"Total harga: Rp {total_price:,}")
 
 # Tombol Konfirmasi Pembelian
 if st.button("Konfirmasi Pembelian"):
-    st.success(f"Pembelian berhasil! Anda membeli {quantity} {product}(s) ukuran {size} dengan total Rp {total_price:,}.")
+    st.success(f"Pembelian berhasil! Anda membeli {quantity} {product} ukuran {size} dengan total Rp {total_price:,}.")
