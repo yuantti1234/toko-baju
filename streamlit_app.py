@@ -63,6 +63,7 @@ st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
 st.write("Keranjang Belanja:")
 for item in keranjang:
     st.write(item)
+    
 # Total Harga
 total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
