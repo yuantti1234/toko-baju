@@ -31,11 +31,6 @@ selected_products = st.multiselect("Pilih produk:", list(products.keys()))
 # Menyimpan total harga
 total_price = 0
 
-# Hitung harga
-harga_total = hitung_harga(produk_terpilih, jumlah)
-print(f"Harga satuan untuk {produk_terpilih}: Rp {produk[produk_terpilih]:,}")
-print(f"Total harga untuk {jumlah} {produk_terpilih}: Rp {harga_total:,}")
-
 # Pilihan Ukuran
 size = st.selectbox( f"Pilih ukuran {product}:", ["S", "M", "L", "XL"],
                    key=f"size_{product}"
