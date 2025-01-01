@@ -65,7 +65,7 @@ for item in items = [50000, 1000000, 150000, 125000]
 total_harga = 0
 for item  in items:
     print(f"harga  barang: Rp {item}")
-    total_harga += item 
+    total_harga += item)
 print(f"Total harga semua barang: Rp 
 {total_harga}")
 #Tambahkan blok kode dibawah ini
