@@ -61,7 +61,7 @@ st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
 
 # Tampilkan isi keranjang
 st.write("Keranjang Belanja:")
-for item in items = []  
+for item in items = [50000, 1000000, 150000, 125000]  
 #Tambahkan blok kode dibawah ini
 st.write(f"item: {item}")
 st.write("Total Harga: Rp100000")
