@@ -66,8 +66,8 @@ total_harga = 0
 for item  in items:
     print(f"harga  barang: Rp {item}")
     total_harga += item
-print(f"Total harga semua barang:") 
-Rp{"{total_harga}")
+print(f"Total harga semua barang:") Rp 
+{total_harga}")
 #Tambahkan blok kode dibawah ini
     
 # Total Harga
