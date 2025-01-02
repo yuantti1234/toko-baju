@@ -63,6 +63,7 @@ st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
 st.write("Keranjang Belanja:")
 for item in items = [50000, 1000000, 150000, 125000]
 print(item) # cetak setiap nilai dalam list
+foer item in items: # mulai perulangan untuk setiap item dalam list
 total_harga = 0
 for item  in items:
     print(f"harga  barang: Rp {item}")
