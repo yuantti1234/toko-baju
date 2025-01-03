@@ -72,6 +72,8 @@ for item  in [50000, 1000000, 150000, 125000]:
     st,write(f"harga barang: Rp{itm}")
     total_harga += item
     
+    # tampilkan total harga 
+st.write(f"total harga semua barang: Rp {total_harga}")
 # Total Harga
 total_price = price * quantity
 st.write(f"Total harga: Rp {total_price:,}")
