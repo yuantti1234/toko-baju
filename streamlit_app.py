@@ -61,17 +61,16 @@ st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
 
 # Tampilkan isi keranjang
 st.write("Keranjang Belanja:")
-for item in items [50000, 1000000, 150000, 125000]:
-for item in items :
-    print(item) # contoh blok kode dibawah for
-foer item in items: # mulai perulangan untuk setiap item dalam list
+# iterasi langsung pada daftar harga
+for item in [50000, 1000000, 150000, 125000]:
+    st.write(f"harga barang: Rp{item}")
+# menampilkan harga barang 
+
+# hitung total harga
 total_harga = 0
-for item  in items:
-    print(f"harga  barang: Rp {item}")
+for item  in [50000, 1000000, 150000, 125000]:
+    st,write(f"harga barang: Rp{itm}")
     total_harga += item
-print(f"Total harga semua barang:") Rp 
-print(f"Total harga: {total_harga}")
-#Tambahkan blok kode dibawah ini
     
 # Total Harga
 total_price = price * quantity
