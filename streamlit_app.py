@@ -63,9 +63,7 @@ st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
 st.write("Keranjang Belanja:")
 for item in items [50000, 1000000, 150000, 125000]:
 for item in items :
-    # kode yang akan dijalankan umtuk setiap item dalam list items
-    # pastikan baris ini dan baris-baris berikuntnya diidentasi dengan benar
-    print(item)
+    print(item) # contoh blok kode dibawah for
 foer item in items: # mulai perulangan untuk setiap item dalam list
 total_harga = 0
 for item  in items:
