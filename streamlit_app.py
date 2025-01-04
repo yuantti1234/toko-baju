@@ -1,87 +1,51 @@
-import streamlit as st
+import tkinter as tk
+from tkinter import messagebox
 
-# Data produk
-products = {
-    "Kaos":50000,
-    "Kemeja":100000,
-    "Jaket":150000,
-    "Sweater":125000,
-}
+def calculate_price():
+    item = item_var.get()
+    size = size_var.get()
 
-# Header aplikasi
-st.title("Penjualan Baju di Toko Arfabi")
-st.subheader("Silakan pilih produk yang ingin dibeli:")
+    # Harga berdasarkan item dan ukuran
+    price_list = {
+        "Celana": {"S": 50000, "M": 60000, "L": 70000, "XL": 80000},
+        "Baju": {"S": 40000, "M": 50000, "L": 60000, "XL": 70000},
+        "Kemeja": {"S": 70000, "M": 80000, "L": 90000, "XL": 100000},
+        "Sweater": {"S": 100000, "M": 110000, "L": 120000, "XL": 130000},
+    }
 
-# Pilihan Produk
-product = st.selectbox("Pilih produk:", list(products.keys()))
+    if item and size:
+        price = price_list[item][size]
+        messagebox.showinfo("Harga", f"Harga {item} ukuran {size}: Rp {price}")
+    else:
+        messagebox.showwarning("Peringatan", "Pilih item dan ukuran terlebih dahulu!")
 
-# Harga Produk
-products = {
-    "kaos":{"harga": 50000},
-    "Kemeja":{"harga": 100000},
-    "Jaket":{"harga":150000},
-    "Sweater":{"harga":125000},
-}
-product = "kaos"
-price = products[product]["harga"]
+# GUI
+root = tk.Tk()
+root.title("Penjualan Pakaian - Tokoh Arfabi")
+root.geometry("400x300")
 
-# Menyimpan total harga
-total_price = 0
+# Label untuk nama toko
+tk.Label(root, text="Tokoh Arfabi", font=("Arial", 16, "bold")).pack(pady=10)
 
-# Pilihan Ukuran
-size = st.selectbox( f"Pilih ukuran {product}:", ["S", "M", "L", "XL"],
-                   key=f"size_{product}"
-                   )
-st.write(f"ukuran yang dipilih untuk {product}: {size}")
-st.write(f"Ukuran yang dipilih: {size}")
+# Dropdown pilihan item
+tk.Label(root, text="Pilih Item:").pack()
+item_var = tk.StringVar()
+item_dropdown = tk.OptionMenu(root, item_var, "Celana", "Baju", "Kemeja", "Sweater")
+item_dropdown.pack()
 
-# Jumlah Pembelian
-quantity = st.number_input("Jumlah pembelian", min_value=1, max_value=100, value=1)
+# Dropdown pilihan ukuran
+tk.Label(root, text="Pilih Ukuran:").pack()
+size_var = tk.StringVar()
+size_dropdown = tk.OptionMenu(root, size_var, "S", "M", "L", "XL")
+size_dropdown.pack()
 
-# Menampilkan total harga keseluruhan
-st.write("## Total Harga")
-st.write(f"Rp {total_price:,}"
-        )
+# Tombol untuk menghitung harga
+calculate_button = tk.Button(root, text="Hitung Harga", command=calculate_price)
+calculate_button.pack(pady=20)
 
-import streamlit as st
+# Tombol keluar
+exit_button = tk.Button(root, text="Keluar", command=root.destroy)
+exit_button.pack()
 
-products = {
-    "Kaos": 50000,
-    "Kemeja": 100000,
-    "Jaket": 150000,
-    "Sweater": 125000
-}
-
-keranjang = []
-
-# ... (sisanya kode yang sudah ada)
-
-# Tambah tombol "Tambah ke Keranjang"
-st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
-
-# Tampilkan isi keranjang
-st.write("Keranjang Belanja:")
-# Set locale untuk format angka
-locale.setlocale(locale.LC_ALL, '')
-# Daftar harga barang
-items = [50000, 1000000, 150000, 125000]
-
-# Tampilan daftar harga barang
-st.write("daftar harga barang:")
-for item in items:
-    harga_format = item
-locale.format_string("%d", item, grouping=true) 
-# Format angka dengan pemisah ribuan
-st.write(f"harga barang: Rp{harga_format}")
-
-# hitung total harga
-total_harga = 0
-for item  in [50000, 1000000, 150000, 125000]:
-# Total Harga
-for item in:
-total_price = price * quantity
-st.write(f"Total harga: Rp {total_price:,}")
-
-# Tombol Konfirmasi Pembelian
-if st.button("Konfirmasi Pembelian"):
-    st.success(f"Pembelian berhasil! Anda membeli {quantity} {product} ukuran {size} dengan total Rp {total_price:,}.")
+# Main loop
+root.mainloop()
