@@ -68,7 +68,7 @@ for item in [50000, 1000000, 150000, 125000]:
 
 # hitung total harga
 total_harga = 0
-for item  in = 50000, 1000000, 150000, 125000,
+for item  in [50000, 1000000, 150000, 125000]:
     st,write(f"harga barang: Rp{item}")
     total_harga += item
 # tampilkan total harga
