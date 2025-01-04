@@ -75,7 +75,7 @@ for item  in [50000, 1000000, 150000, 125000]:
 #....bagian kode selanjutnya
     
 # tampilkan total harga 
-st.write(f"total harga semua barang: Rp {total_harga}")
+st.write(f"total harga semua barang: Rp {locale.format_string('%d', total_harga, grouping=true)}")
 
 # Total Harga
 total_price = price * quantity
