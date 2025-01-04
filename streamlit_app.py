@@ -69,8 +69,7 @@ items = [50000, 1000000, 150000, 125000]
 # Tampilan daftar harga barang
 st.write("daftar harga barang:")
 for item in items:
-    harga_format =
-    locale.format_string("%d", item, grouping=true) 
+harga_format = locale.format_string("%d", item, grouping=true) 
 # Format angka dengan pemisah ribuan
 st.write(f"harga barang: Rp{harga_format}")
 
