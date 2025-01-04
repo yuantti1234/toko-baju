@@ -66,7 +66,7 @@ locale.setlocale(locale.LC_ALL, '')
 # iterasi langsung pada daftar harga
 for item in [50000, 1000000, 150000, 125000]:    
 # Tampilan daftar harga barang
-st.write("daftar harga barang: Rp{item}")
+st.write("daftar harga barang:")
 for item in items:
     harga_format =
     locale.format_string("%d", item, grouping=true) 
