@@ -63,8 +63,9 @@ st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
 st.write("Keranjang Belanja:")
 # Set locale untuk format angka
 locale.setlocale(locale.LC_ALL, '')
-# iterasi langsung pada daftar harga
-for item in [50000, 1000000, 150000, 125000]:    
+# Daftar harga barang
+items = [50000, 1000000, 150000, 125000]
+
 # Tampilan daftar harga barang
 st.write("daftar harga barang:")
 for item in items:
