@@ -61,21 +61,23 @@ st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
 
 # Tampilkan isi keranjang
 st.write("Keranjang Belanja:")
+set locale untuk format angka
+locale.setlocale(locale.LC_ALL, '')
 # iterasi langsung pada daftar harga
 for item in [50000, 1000000, 150000, 125000]:
-    st.write(f"harga barang: Rp{item}")
-# menampilkan harga barang 
+    
+# Tampilan daftar harga barang
+st.write("daftar harga barang: Rp{item}")
+for item in items:
+    harga_format =
+    locale.format_string("%d", item, grouping=true) 
+# Format angka dengan pemisah ribuan
+st.write(f"harga barang: Rp{harga_format}")
 
 # hitung total harga
 total_harga = 0
 for item  in [50000, 1000000, 150000, 125000]:
-    st,write(f"harga barang: Rp{locale.format_string('%d', harga, grouping=tre)}")
-    total_harga += harga
-    st.write(f"total harga b semua barang:
-    Rp{locale.format_string('%d', total_harga, grouping=true)}")
-# tampilkan total harga
-#....bagian kode selanjutnya
-    
+       
 # tampilkan total harga 
 st.write(f"total harga semua barang: Rp{item}")
 
