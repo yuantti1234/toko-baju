@@ -1,43 +1,87 @@
-# Data produk baju Arfabi
-products = [
-    {
-        'name': 'Baju Arfabi',
-        'type': 'Baju',
-        'sizes': ['S', 'M', 'L', 'XL'],
-        'price': 150000
-    },
-    {
-        'name': 'Celana Arfabi',
-        'type': 'Celana',
-        'sizes': ['S', 'M', 'L', 'XL'],
-        'price': 200000
-    },
-    {
-        'name': 'Sweater Arfabi',
-        'type': 'Sweater',
-        'sizes': ['S', 'M', 'L', 'XL'],
-        'price': 250000
-    },
-    {
-        'name': 'Kemeja Arfabi',
-        'type': 'Kemeja',
-        'sizes': ['S', 'M', 'L', 'XL'],
-        'price': 180000
-    }
-]
+import streamlit as st
 
-# Fungsi untuk menampilkan produk
-def display_products(products):
-    print("Daftar Produk Baju Arfabi:")
-    print("{:<20} {:<10} {:<20} {:<10}".format('Nama Produk', 'Jenis', 'Ukuran', 'Harga (IDR)'))
-    print("-" * 60)
-    for product in products:
-        print("{:<20} {:<10} {:<20} {:<10}".format(
-            product['name'],
-            product['type'],
-            ', '.join(product['sizes']),
-            product['price']
-        ))
+# Data produk
+products = {
+    "Kaos":50000,
+    "Kemeja":100000,
+    "Jaket":150000,
+    "Sweater":125000,
+}
 
-# Menampilkan produk
-display_products(products)
+# Header aplikasi
+st.title("Penjualan Baju di Toko Arfabi")
+st.subheader("Silakan pilih produk yang ingin dibeli:")
+
+# Pilihan Produk
+product = st.selectbox("Pilih produk:", list(products.keys()))
+
+# Harga Produk
+products = {
+    "kaos":{"harga": 50000},
+    "Kemeja":{"harga": 100000},
+    "Jaket":{"harga":150000},
+    "Sweater":{"harga":125000},
+}
+product = "kaos"
+price = products[product]["harga"]
+
+# Menyimpan total harga
+total_price = 0
+
+# Pilihan Ukuran
+size = st.selectbox( f"Pilih ukuran {product}:", ["S", "M", "L", "XL"],
+                   key=f"size_{product}"
+                   )
+st.write(f"ukuran yang dipilih untuk {product}: {size}")
+st.write(f"Ukuran yang dipilih: {size}")
+
+# Jumlah Pembelian
+quantity = st.number_input("Jumlah pembelian", min_value=1, max_value=100, value=1)
+
+# Menampilkan total harga keseluruhan
+st.write("## Total Harga")
+st.write(f"Rp {total_price:,}"
+        )
+
+import streamlit as st
+
+products = {
+    "Kaos": 50000,
+    "Kemeja": 100000,
+    "Jaket": 150000,
+    "Sweater": 125000
+}
+
+keranjang = []
+
+# ... (sisanya kode yang sudah ada)
+
+# Tambah tombol "Tambah ke Keranjang"
+st.button("Tambah ke Keranjang", on_click=lambda: keranjang.append(product))
+
+# Tampilkan isi keranjang
+st.write("Keranjang Belanja:")
+# Set locale untuk format angka
+locale.setlocale(locale.LC_ALL, '')
+# Daftar harga barang
+items = [50000, 1000000, 150000, 125000]
+
+# Tampilan daftar harga barang
+st.write("daftar harga barang:")
+for item in items:
+    harga_format = item
+locale.format_string("%d", item, grouping=true) 
+# Format angka dengan pemisah ribuan
+st.write(f"harga barang: Rp{harga_format}")
+
+# hitung total harga
+total_harga = 0
+for item  in [50000, 1000000, 150000, 125000]:
+# Total Harga
+for item in:
+total_price = price * quantity
+st.write(f"Total harga: Rp {total_price:,}")
+
+# Tombol Konfirmasi Pembelian
+if st.button("Konfirmasi Pembelian"):
+    st.success(f"Pembelian berhasil! Anda membeli {quantity} {product} ukuran {size} dengan total Rp {total_price:,}.")
