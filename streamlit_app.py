@@ -77,7 +77,6 @@ st.write(f"harga barang: Rp{harga_format}")
 # hitung total harga
 total_harga = 0
 for item  in [50000, 1000000, 150000, 125000]:
-
 # Total Harga
 for item in items:
 total_price = price * quantity
