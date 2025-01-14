@@ -4,14 +4,15 @@ import streamlit as st
 products = {
     "Kaos": {
         "harga": 50000,
-        "ukuran": ["S", "M", "L", "XL"],
+        "ukuran": ["S", "M", "L",
+"XL"],
         "gambar": "images/kaos.png"},
     },
     "Kemeja": {
         "harga": 100000,
-        "ukuran": ["S", "M", "L", "XL"],
-        "gambar": "images/kemeja.png"
-    },
+        "ukuran": ["S", "M", "L",
+"XL"],
+        "gambar": "images/kemeja.png"},
     },
     "Jaket": {
         "harga": 150000,
