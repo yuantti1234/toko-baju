@@ -4,14 +4,12 @@ import streamlit as st
 products = {
     "Kaos": {
         "harga": 50000,
-        "ukuran": ["S", "M", "L",
-"XL"],
+        "ukuran": ["S", "M", "L","XL"],
         "gambar": "images/kaos.png"},
     },
-    "Kemeja": {
+     "Kemeja": {
         "harga": 100000,
-        "ukuran": ["S", "M", "L",
-"XL"],
+        "ukuran": ["S", "M", "L","XL"],
         "gambar": "images/kemeja.png"},
     },
     "Jaket": {
@@ -44,7 +42,7 @@ for product, details in products.items():
     ukuran = st.selectbox(f"Pilih ukuran untuk {product}", options=details["ukuran"], key=f"size_{product}")
     jumlah = st.number_input(f"Masukkan jumlah untuk {product}", min_value=0, step=1, key=f"qty_{product}")
     if jumlah > 0:
-        selected_products[product] = {"harga": details["harga"], "ukuran": ukuran, "jumlah": jumlah}
+        selected_products[product] = {"harga"} details["harga"], "ukuran": ukuran, "jumlah": jumlah}
 
 # Total belanja
 if st.button("Hitung Total"):
