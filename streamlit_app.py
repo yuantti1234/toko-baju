@@ -10,7 +10,8 @@ products = {
     "Kemeja": {
         "harga": 100000,
         "ukuran": ["S", "M", "L", "XL"],
-        "gambar": "images/kemeja.png"},
+        "gambar": "images/kemeja.png"
+    },
     },
     "Jaket": {
         "harga": 150000,
