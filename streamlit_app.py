@@ -5,27 +5,27 @@ products = {
     "Kaos": {
         "harga": 50000,
         "ukuran": ["S", "M", "L", "XL"],
-        "gambar": "https://via.placeholder.com/150?text=Kaos"
+        "gambar": "https://example.com/kaos.png"}"
     },
     "Kemeja": {
         "harga": 100000,
         "ukuran": ["S", "M", "L", "XL"],
-        "gambar": "https://via.placeholder.com/150?text=Kemeja"
+        "gambar": "https://example.com/kemeja.png"}
     },
     "Jaket": {
         "harga": 150000,
         "ukuran": ["M", "L", "XL"],
-        "gambar": "https://via.placeholder.com/150?text=Jaket"
+        "gambar": "https://example.com/Jaket.png"}
     },
     "Sweater": {
         "harga": 125000,
         "ukuran": ["M", "L", "XL"],
-        "gambar": "https://via.placeholder.com/150?text=Sweater"
+        "gambar": "https://example.com/sweater.png"}
     },
     "Celana": {
         "harga": 75000,
         "ukuran": ["M", "L", "XL"],
-        "gambar": "https://via.placeholder.com/150?text=Celana"
+        "gambar":"https://example.com/kaos.png"}
     },
 }
 
