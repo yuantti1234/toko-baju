@@ -1,16 +1,36 @@
 import streamlit as st
 
-# Data produk
+# Data produk dengan URL gambar
 products = {
-    "Kaos": {"harga": 50000, "ukuran": ["S", "M", "L", "XL"]},
-    "Kemeja": {"harga": 100000, "ukuran": ["S", "M", "L", "XL"]},
-    "Jaket": {"harga": 150000, "ukuran": ["M", "L", "XL"]},
-    "Sweater": {"harga": 125000, "ukuran": ["M", "L", "XL"]},
-    "Celana": {"harga": 75000, "ukuran": ["M", "L", "XL"]},
+    "Kaos": {
+        "harga": 50000,
+        "ukuran": ["S", "M", "L", "XL"],
+        "gambar": "https://via.placeholder.com/150?text=Kaos"
+    },
+    "Kemeja": {
+        "harga": 100000,
+        "ukuran": ["S", "M", "L", "XL"],
+        "gambar": "https://via.placeholder.com/150?text=Kemeja"
+    },
+    "Jaket": {
+        "harga": 150000,
+        "ukuran": ["M", "L", "XL"],
+        "gambar": "https://via.placeholder.com/150?text=Jaket"
+    },
+    "Sweater": {
+        "harga": 125000,
+        "ukuran": ["M", "L", "XL"],
+        "gambar": "https://via.placeholder.com/150?text=Sweater"
+    },
+    "Celana": {
+        "harga": 75000,
+        "ukuran": ["M", "L", "XL"],
+        "gambar": "https://via.placeholder.com/150?text=Celana"
+    },
 }
 
 # Judul aplikasi
-st.title("Tokoh Arfabi")
+st.title("🛍 Tokoh Arfabi")
 st.subheader("Penjualan Pakaian")
 
 # Input belanjaan
@@ -18,6 +38,7 @@ st.write("### Pilih produk dan jumlah")
 selected_products = {}
 for product, details in products.items():
     st.write(f"{product}** - Rp{details['harga']}")
+    st.image(details["gambar"], width=150)  # Menampilkan gambar produk
     ukuran = st.selectbox(f"Pilih ukuran untuk {product}", options=details["ukuran"], key=f"size_{product}")
     jumlah = st.number_input(f"Masukkan jumlah untuk {product}", min_value=0, step=1, key=f"qty_{product}")
     if jumlah > 0:
@@ -34,4 +55,4 @@ if st.button("Hitung Total"):
     st.write(f"*Total Belanja: Rp{total}*")
 
 # Footer
-st.write("Terima kasih telah berbelanja di Tokoh Arfabi!")
+st.write("✨ Terima kasih telah berbelanja di Tokoh Arfabi! ✨")
