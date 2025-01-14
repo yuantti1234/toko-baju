@@ -5,7 +5,7 @@ products = {
     "Kaos": {
         "harga": 50000,
         "ukuran": ["S", "M", "L", "XL"],
-        "gambar": "https://example.com/kaos.png"}"
+        "gambar": "https://example.com/kaos.png"}
     },
     "Kemeja": {
         "harga": 100000,
